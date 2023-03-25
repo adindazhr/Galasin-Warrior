@@ -22,10 +22,10 @@ public class Enemy : Agent
                                            2.317779f,
                                            0.0262009f);
 
-        Penyerang1.localPosition = new Vector3( 27.00822f, 0.08f, -2.9266f);
+        Penyerang1.localPosition = new Vector3( 27.00822f, 0.03f, -2.9266f);
     }
 
-    public float forceMultiplier = 10;
+    public float forceMultiplier = 2;
     public override void OnActionReceived(ActionBuffers actionBuffers)
     {
         // Actions, size = 2
@@ -43,4 +43,6 @@ public class Enemy : Agent
             EndEpisode();
         }
     }
+
+    
 }
