@@ -1,0 +1,42 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1680448446",
+        "python_version": "3.8.5 (tags/v3.8.5:580fbb0, Jul 20 2020, 15:57:54) [MSC v.1924 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\Adinda\\AppData\\Local\\Programs\\PythonCodingPack\\Scripts\\mlagents-learn assets/config/penjaga_config.yaml --run-id=duaagent2 --resume",
+        "mlagents_version": "0.27.0",
+        "mlagents_envs_version": "0.27.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.7.1+cu110",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1680448455"
+    },
+    "total": 8.738480099999999,
+    "count": 1,
+    "self": 0.008325099999998642,
+    "children": {
+        "run_training.setup": {
+            "total": 0.1867669999999999,
+            "count": 1,
+            "self": 0.1867669999999999
+        },
+        "TrainerController.start_learning": {
+            "total": 8.543388,
+            "count": 1,
+            "self": 0.00016180000000076689,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 8.5432116,
+                    "count": 1,
+                    "self": 8.5432116
+                },
+                "TrainerController._save_models": {
+                    "total": 1.4600000000086766e-05,
+                    "count": 1,
+                    "self": 1.4600000000086766e-05
+                }
+            }
+        }
+    }
+}

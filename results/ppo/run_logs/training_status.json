@@ -1,4 +1,48 @@
 {
+    "Enemy": {
+        "checkpoints": [
+            {
+                "steps": 320,
+                "file_path": "results\\ppo\\Enemy\\Enemy-320.onnx",
+                "reward": null,
+                "creation_time": 1680446892.0491028,
+                "auxillary_file_paths": [
+                    "results\\ppo\\Enemy\\Enemy-320.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 320,
+            "file_path": "results\\ppo\\Enemy.onnx",
+            "reward": null,
+            "creation_time": 1680446892.0491028,
+            "auxillary_file_paths": [
+                "results\\ppo\\Enemy\\Enemy-320.pt"
+            ]
+        }
+    },
+    "My Behavior": {
+        "checkpoints": [
+            {
+                "steps": 64,
+                "file_path": "results\\ppo\\My Behavior\\My Behavior-64.onnx",
+                "reward": null,
+                "creation_time": 1680446892.132457,
+                "auxillary_file_paths": [
+                    "results\\ppo\\My Behavior\\My Behavior-64.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 64,
+            "file_path": "results\\ppo\\My Behavior.onnx",
+            "reward": null,
+            "creation_time": 1680446892.132457,
+            "auxillary_file_paths": [
+                "results\\ppo\\My Behavior\\My Behavior-64.pt"
+            ]
+        }
+    },
     "metadata": {
         "stats_format_version": "0.3.0",
         "mlagents_version": "0.27.0",

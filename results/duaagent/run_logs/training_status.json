@@ -1,0 +1,47 @@
+{
+    "Enemy": {
+        "checkpoints": [
+            {
+                "steps": 0,
+                "file_path": "results\\duaagent\\Enemy\\Enemy-0.onnx",
+                "reward": null,
+                "creation_time": 1680447076.5396564,
+                "auxillary_file_paths": [
+                    "results\\duaagent\\Enemy\\Enemy-0.pt"
+                ]
+            },
+            {
+                "steps": 0,
+                "file_path": "results\\duaagent\\Enemy\\Enemy-0.onnx",
+                "reward": null,
+                "creation_time": 1680447204.4530804,
+                "auxillary_file_paths": [
+                    "results\\duaagent\\Enemy\\Enemy-0.pt"
+                ]
+            },
+            {
+                "steps": 0,
+                "file_path": "results\\duaagent\\Enemy\\Enemy-0.onnx",
+                "reward": null,
+                "creation_time": 1680447272.9281504,
+                "auxillary_file_paths": [
+                    "results\\duaagent\\Enemy\\Enemy-0.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 0,
+            "file_path": "results\\duaagent\\Enemy.onnx",
+            "reward": null,
+            "creation_time": 1680447272.9281504,
+            "auxillary_file_paths": [
+                "results\\duaagent\\Enemy\\Enemy-0.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

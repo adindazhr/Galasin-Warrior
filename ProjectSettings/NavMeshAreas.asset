@@ -17,9 +17,9 @@ NavMeshProjectSettings:
     cost: 1
   - name: For Enemy 3
     cost: 1
-  - name: 
+  - name: For Enemy 4
     cost: 1
-  - name: 
+  - name: For Enemy 5
     cost: 1
   - name: 
     cost: 1
