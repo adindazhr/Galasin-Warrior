@@ -8,12 +8,13 @@ public class MoveTarget : Agent
 {
     public float Movespeed = 20;
     private Vector3 orig;
-    private Bounds bndFloor, bndArea;
+    private Bounds bndFloor;
     private GameObject Target = null, Obstacle = null;
+    private bool dead, finish;
 
     public override void Initialize()
     {
-        orig = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
+        orig = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z); 
         bndFloor = GameObject.FindWithTag("Floor").gameObject.GetComponent<MeshRenderer>().bounds;
         Target = GameObject.FindWithTag("Target");
         Obstacle = GameObject.FindWithTag("Obstacle");
@@ -24,6 +25,7 @@ public class MoveTarget : Agent
         Globals.Episode += 1;
         this.transform.position = new Vector3(orig.x, orig.y, orig.z);
         // RandomPlaceTarget();
+       
     }
     public override void OnActionReceived(ActionBuffers vectorAction)
     {
@@ -51,6 +53,36 @@ public class MoveTarget : Agent
             BoundCheck();
             Globals.ScreenText();
         }
+        
+        if (dead) 
+        {
+            if(this.gameObject.name == "Player") this.transform.localPosition = new Vector3(9.86f, 1.83f, -24.82f); 
+            else if(this.gameObject.name == "Player1") this.transform.localPosition = new Vector3(9.86f, 1.83f, -24.82f);
+            else if(this.gameObject.name == "Player2") this.transform.localPosition = new Vector3(9.86f, 1.83f, -24.82f); 
+            else if(this.gameObject.name == "Player3") this.transform.localPosition = new Vector3(9.86f, 1.83f, -24.82f);
+            else if(this.gameObject.name == "Player4") this.transform.localPosition = new Vector3(9.86f, 1.83f, -24.82f);
+            else if(this.gameObject.name == "Player5") this.transform.localPosition = new Vector3(9.86f, 1.83f, -24.82f);
+
+        }
+
+        if(finish)
+        {
+            this.transform.localPosition = new Vector3(68.62f, 1.83f, -19.34f);
+        }
+
+        if(Globals.Player == 0) {
+            dead = false;
+            finish = false;
+            Globals.check += 1;
+            if (Globals.check % 6 == 0 )
+            {
+                Globals.Player = 6;
+
+            }
+            EndEpisode();
+            
+        } 
+        
     }
 
     IEnumerator PauseAgent()
@@ -73,9 +105,11 @@ public class MoveTarget : Agent
         if (collision.gameObject.CompareTag("Target") == true)
         {
             Globals.Success += 1;
-            Debug.Log("finish");
             AddReward(1.0f);
-            EndEpisode();
+            finish = true;
+            Globals.Player -= 1;
+            Debug.Log("finish");
+            // EndEpisode();
         }
 
         if(collision.gameObject.CompareTag("Obstacle") == true)
@@ -86,6 +120,9 @@ public class MoveTarget : Agent
             // EndEpisode();
             // this.transform.Translate(Vector3.right * 0.0f * Movespeed * Time.deltaTime);
             // this.transform.Translate(Vector3.forward * 0.0f * Movespeed * Time.deltaTime);
+            // Destroy(this.transform.gameObject);
+            dead = true;
+            Globals.Player -= 1;
             Debug.Log("dead");
         }
     }
