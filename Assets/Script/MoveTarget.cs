@@ -62,10 +62,10 @@ public class MoveTarget : Agent
         yield return new WaitForSeconds(3.0f);
         Vector3 moveDirection = Random.Range(0f, 1f) > Random.Range(0f, 1f) ? Vector3.right : Vector3.left;
         this.transform.Translate(Vector3.back * 0.01f * 20 * Time.deltaTime);
-        this.transform.Translate(moveDirection * 0.03f * 25 * Time.deltaTime);
+        this.transform.Translate(moveDirection * 0.05f * 25 * Time.deltaTime);
         // Resume normal movement
         Debug.Log("Resuming movement.");
-        SetReward(0.001f);
+        AddReward(0.001f);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -83,7 +83,10 @@ public class MoveTarget : Agent
             Debug.Log("hit");
             Globals.Fail += 1;
             AddReward(-1.0f);
-            EndEpisode();
+            // EndEpisode();
+            // this.transform.Translate(Vector3.right * 0.0f * Movespeed * Time.deltaTime);
+            // this.transform.Translate(Vector3.forward * 0.0f * Movespeed * Time.deltaTime);
+            Debug.Log("dead");
         }
     }
 
