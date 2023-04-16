@@ -2,13 +2,20 @@
     "name": "root",
     "metadata": {
         "timer_format_version": "0.1.0",
+<<<<<<< Updated upstream
         "start_time_seconds": "1679756358",
         "python_version": "3.8.5 (tags/v3.8.5:580fbb0, Jul 20 2020, 15:57:54) [MSC v.1924 64 bit (AMD64)]",
         "command_line_arguments": "C:\\Users\\Adinda\\AppData\\Local\\Programs\\PythonCodingPack\\Scripts\\mlagents-learn --force",
+=======
+        "start_time_seconds": "1680479873",
+        "python_version": "3.8.16 (default, Mar  2 2023, 03:18:16) [MSC v.1916 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\User\\.conda\\envs\\mlagents\\Scripts\\mlagents-learn --resume",
+>>>>>>> Stashed changes
         "mlagents_version": "0.27.0",
         "mlagents_envs_version": "0.27.0",
         "communication_protocol_version": "1.5.0",
         "pytorch_version": "1.7.1+cu110",
+<<<<<<< Updated upstream
         "numpy_version": "1.21.2",
         "end_time_seconds": "1679756383"
     },
@@ -153,6 +160,44 @@
                             "total": 0.10524270000000158,
                             "count": 1,
                             "self": 0.10524270000000158
+=======
+        "numpy_version": "1.23.5",
+        "end_time_seconds": "1680479879"
+    },
+    "total": 6.0975613,
+    "count": 1,
+    "self": 0.02496369999999981,
+    "children": {
+        "run_training.setup": {
+            "total": 0.061898800000000254,
+            "count": 1,
+            "self": 0.061898800000000254
+        },
+        "TrainerController.start_learning": {
+            "total": 6.0106988,
+            "count": 1,
+            "self": 0.0003567000000010978,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 5.7185144,
+                    "count": 1,
+                    "self": 5.7185144
+                },
+                "trainer_threads": {
+                    "total": 1.6999999985500835e-06,
+                    "count": 1,
+                    "self": 1.6999999985500835e-06
+                },
+                "TrainerController._save_models": {
+                    "total": 0.29182600000000036,
+                    "count": 1,
+                    "self": 0.02186870000000063,
+                    "children": {
+                        "RLTrainer._checkpoint": {
+                            "total": 0.26995729999999973,
+                            "count": 1,
+                            "self": 0.26995729999999973
+>>>>>>> Stashed changes
                         }
                     }
                 }

@@ -1,0 +1,49 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1680498744",
+        "python_version": "3.8.5 (tags/v3.8.5:580fbb0, Jul 20 2020, 15:57:54) [MSC v.1924 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\Adinda\\AppData\\Local\\Programs\\PythonCodingPack\\Scripts\\mlagents-learn assets/config/Player_config.yaml --run-id=nye --resume",
+        "mlagents_version": "0.27.0",
+        "mlagents_envs_version": "0.27.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.7.1+cu110",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1680498757"
+    },
+    "total": 12.9976972,
+    "count": 1,
+    "self": 0.009959999999999525,
+    "children": {
+        "run_training.setup": {
+            "total": 0.201843,
+            "count": 1,
+            "self": 0.201843
+        },
+        "TrainerController.start_learning": {
+            "total": 12.7858942,
+            "count": 1,
+            "self": 0.00012309999999970955,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 11.57486,
+                    "count": 1,
+                    "self": 11.57486
+                },
+                "TrainerController._save_models": {
+                    "total": 1.2109111000000006,
+                    "count": 1,
+                    "self": 0.017644300000000612,
+                    "children": {
+                        "RLTrainer._checkpoint": {
+                            "total": 1.1932668,
+                            "count": 1,
+                            "self": 1.1932668
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
